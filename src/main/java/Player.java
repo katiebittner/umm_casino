@@ -34,9 +34,9 @@ public class Player {
 
     }
 
-    public void getCard(int Position){
+    public Card getCard(int Position){
 
-        return ;
+        return;
 
     }
 
