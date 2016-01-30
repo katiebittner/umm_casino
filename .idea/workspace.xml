@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06762a1f-88ee-4dd6-8e97-97261a2301a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitIgnore" afterPath="$PROJECT_DIR$/.gitIgnore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Bacarat.java" afterPath="$PROJECT_DIR$/src/main/java/Bacarat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Card.java" afterPath="$PROJECT_DIR$/src/main/java/Card.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Casino.java" afterPath="$PROJECT_DIR$/src/main/java/Casino.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ComputerPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/ComputerPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PackOfCards.java" afterPath="$PROJECT_DIR$/src/main/java/PackOfCards.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Player.java" afterPath="$PROJECT_DIR$/src/main/java/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CasinoSpec.java" afterPath="$PROJECT_DIR$/src/test/java/CasinoSpec.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/PackOfCardsSpec.java" afterPath="$PROJECT_DIR$/src/test/java/PackOfCardsSpec.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/PlayerSpec.java" afterPath="$PROJECT_DIR$/src/test/java/PlayerSpec.java" />
     </list>
     <ignored path="Casino.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -790,12 +779,12 @@
       <option name="number" value="Default" />
       <updated>1454095315468</updated>
       <workItem from="1454095318527" duration="729000" />
-      <workItem from="1454096161371" duration="24489000" />
+      <workItem from="1454096161371" duration="24623000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25218000" />
+    <option name="totallyTimeSpent" value="25352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
