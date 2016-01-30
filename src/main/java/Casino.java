@@ -18,7 +18,7 @@ public class Casino {
 
     Casino() {
         options();
-        
+
     }
 
     //main menu
