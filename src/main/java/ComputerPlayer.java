@@ -12,12 +12,9 @@ public class ComputerPlayer extends Player{
     public enum Names {TOGEPI, ZELDA, RANDOMNAMEHERE, ANOTHERRANDOMNAME, OTHERRANDOMNAMES};
 
 
-    public ComputerPlayer(String Name, int score){
+    Names(String Name){
 
-
-
-
-   }
+    }
 
 
 }

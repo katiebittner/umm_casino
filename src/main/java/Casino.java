@@ -18,6 +18,11 @@ public class Casino {
         Casino casino = new Casino();
     }
 
+    Casino(){
+        options();
+
+
+    }
 
     //main menu
     void options() {
