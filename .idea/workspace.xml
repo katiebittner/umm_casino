@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06762a1f-88ee-4dd6-8e97-97261a2301a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Suit.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Value.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BlackJack.class" afterPath="$PROJECT_DIR$/target/classes/BlackJack.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Card.class" afterPath="$PROJECT_DIR$/target/classes/Card.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Casino.class" afterPath="$PROJECT_DIR$/target/classes/Casino.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Game.class" afterPath="$PROJECT_DIR$/target/classes/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/PackOfCards.class" afterPath="$PROJECT_DIR$/target/classes/PackOfCards.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitIgnore" afterPath="$PROJECT_DIR$/.gitIgnore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Bacarat.java" afterPath="$PROJECT_DIR$/src/main/java/Bacarat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BlackJack.java" afterPath="$PROJECT_DIR$/src/main/java/BlackJack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Card.java" afterPath="$PROJECT_DIR$/src/main/java/Card.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Casino.java" afterPath="$PROJECT_DIR$/src/main/java/Casino.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ComputerPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/ComputerPlayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PackOfCards.java" afterPath="$PROJECT_DIR$/src/main/java/PackOfCards.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Player.java" afterPath="$PROJECT_DIR$/src/main/java/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CasinoSpec.java" afterPath="$PROJECT_DIR$/src/test/java/CasinoSpec.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/PackOfCardsSpec.java" afterPath="$PROJECT_DIR$/src/test/java/PackOfCardsSpec.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/PlayerSpec.java" afterPath="$PROJECT_DIR$/src/test/java/PlayerSpec.java" />
     </list>
     <ignored path="Casino.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,7 +52,7 @@
       <file leaf-file-name="BlackJack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BlackJack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="35.037037">
+            <state vertical-scroll-proportion="-158.88889">
               <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -65,25 +63,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bacarat.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bacarat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Bacarat.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Casino.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Casino.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Casino.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+            <state vertical-scroll-proportion="2.2069826">
+              <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#389#390#0" expanded="true" />
+                <element signature="e#433#434#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,8 +91,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-              <folding />
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,20 +103,20 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Card.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#203#204#0" expanded="true" />
                 <element signature="e#275#276#0" expanded="true" />
                 <element signature="e#454#455#0" expanded="true" />
                 <element signature="e#526#527#0" expanded="true" />
-                <element signature="e#966#967#0" expanded="true" />
-                <element signature="e#993#994#0" expanded="true" />
-                <element signature="e#1023#1024#0" expanded="true" />
-                <element signature="e#1051#1052#0" expanded="true" />
-                <element signature="e#1088#1089#0" expanded="true" />
-                <element signature="e#1120#1121#0" expanded="true" />
-                <element signature="e#1160#1161#0" expanded="true" />
-                <element signature="e#1194#1195#0" expanded="true" />
+                <element signature="e#967#968#0" expanded="true" />
+                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#1024#1025#0" expanded="true" />
+                <element signature="e#1052#1053#0" expanded="true" />
+                <element signature="e#1089#1090#0" expanded="true" />
+                <element signature="e#1121#1122#0" expanded="true" />
+                <element signature="e#1161#1162#0" expanded="true" />
+                <element signature="e#1195#1196#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,17 +126,19 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/PackOfCards.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1224#1225#0" expanded="true" />
-                <element signature="e#1275#1276#0" expanded="true" />
-                <element signature="e#1356#1357#0" expanded="true" />
-                <element signature="e#1394#1395#0" expanded="true" />
-                <element signature="e#1463#1464#0" expanded="true" />
-                <element signature="e#1497#1498#0" expanded="true" />
-                <element signature="e#1580#1581#0" expanded="true" />
-                <element signature="e#1607#1608#0" expanded="true" />
+                <element signature="e#986#987#0" expanded="true" />
+                <element signature="e#1023#1024#0" expanded="true" />
+                <element signature="e#1286#1287#0" expanded="true" />
+                <element signature="e#1337#1338#0" expanded="true" />
+                <element signature="e#1418#1419#0" expanded="true" />
+                <element signature="e#1456#1457#0" expanded="true" />
+                <element signature="e#1525#1526#0" expanded="true" />
+                <element signature="e#1559#1560#0" expanded="true" />
+                <element signature="e#1642#1643#0" expanded="true" />
+                <element signature="e#1669#1670#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,13 +158,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BlackJack.java" />
+        <option value="$PROJECT_DIR$/.gitIgnore" />
+        <option value="$PROJECT_DIR$/src/main/java/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Bacarat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Casino.java" />
         <option value="$PROJECT_DIR$/src/main/java/Card.java" />
         <option value="$PROJECT_DIR$/src/main/java/PackOfCards.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BlackJack.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Casino.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Bacarat.java" />
-        <option value="$PROJECT_DIR$/.gitIgnore" />
       </list>
     </option>
   </component>
@@ -788,12 +790,12 @@
       <option name="number" value="Default" />
       <updated>1454095315468</updated>
       <workItem from="1454095318527" duration="729000" />
-      <workItem from="1454096161371" duration="23396000" />
+      <workItem from="1454096161371" duration="24489000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24125000" />
+    <option name="totallyTimeSpent" value="25218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -871,6 +873,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11221945">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Bacarat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -882,56 +900,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding>
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1160#1161#0" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PackOfCards.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#1275#1276#0" expanded="true" />
-            <element signature="e#1356#1357#0" expanded="true" />
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1463#1464#0" expanded="true" />
-            <element signature="e#1497#1498#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BlackJack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="35.037037">
+        <state vertical-scroll-proportion="-158.88889">
           <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -941,31 +912,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Casino.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1089#1090#0" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitIgnore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11221945">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Bacarat.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/PackOfCards.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+            <element signature="e#1418#1419#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1559#1560#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1669#1670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Casino.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2069826">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

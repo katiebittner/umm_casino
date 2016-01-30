@@ -17,6 +17,7 @@ enum Value {ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUE
     public static Value getRandom() {
         return values()[(int) (Math.random() * values().length)];
     }
+
 }
 
 public class Card {
@@ -66,4 +67,8 @@ public class Card {
 
         return s + " " + value;
     }
+
 }
+
+
+

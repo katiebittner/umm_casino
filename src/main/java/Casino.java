@@ -6,6 +6,7 @@ import java.util.Scanner;
  */
 public class Casino {
 
+    //initializing an empty arrayList of players
 
     //initializes the activeGame to be later up cast into one of the specific Game classes
     private Game activeGame = new Game();
@@ -20,8 +21,9 @@ public class Casino {
 
     }
 
+
     //main menu
-   public void options() {
+    void options() {
         System.out.println("WELCOME TO THE MAIN MENU");
         System.out.println("Would you like add a player ('A'), remove a player ('R'), " +
                 "select a game ('G'), or view credits ('C')?");
@@ -39,7 +41,8 @@ public class Casino {
             }
             break;
             case ('G'): {
-                //before starting a game, check the size of the array
+
+
                 selectGame();
             }
             break;
@@ -62,8 +65,11 @@ public class Casino {
             System.out.println("Enter player's name.");
             String player = scan.nextLine();
             Player gambler = new Player(player, 100);
-
+            //player constructor takes arguments for name and score. starts at 0
         }
+
+
+
 
 
     void selectGame() {
@@ -85,5 +91,4 @@ public class Casino {
                 "Jocelyn Harper, Will Scown. January 2016");
         options();
     }
-
 }

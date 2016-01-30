@@ -4,17 +4,23 @@ import java.util.Random;
 /**
  * Created by wscown on 1/29/16.
  */
-public class PackOfCards extends Card{
+
+
+
+public class PackOfCards {
+
 
     //Main method used for testing
     /*
     public static void main(String[] args) {
         PackOfCards poc = new PackOfCards();
+
     }*/
 
     //Our deck of cards
     private ArrayList<Card> deck;
     private int currentPosition;
+
 
     //Constructor initialised deck to a full pack of cards
     PackOfCards(){
@@ -43,6 +49,12 @@ public class PackOfCards extends Card{
     //Remove and return card from "top" of deck
 
 
+
+    public Card dealCard(){
+        return deck.remove(0);
+    }
+
+
     //Add card from the "base" of the deck and return the size of the current deck
     public int returntoDeck(Card card){
         deck.add(deck.size(), card);
@@ -69,4 +81,8 @@ public class PackOfCards extends Card{
     public ArrayList<Card> getDeck(){
         return deck;
     }
+
 }
+
+
+
