@@ -10,12 +10,14 @@ public class Player {
     private int score;
 
 
-    private void Player(String name, int score){
+    public Player(String name, int score){
         this.name = name;
         this.score = score;
     }
 
     private ArrayList<Card> hand = new ArrayList<Card>(
+
+            
 
     );
 
