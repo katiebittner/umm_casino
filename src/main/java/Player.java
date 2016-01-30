@@ -36,7 +36,7 @@ public class Player {
 
     public Card getCard(int Position){
 
-        return;
+        return null;
 
     }
 
