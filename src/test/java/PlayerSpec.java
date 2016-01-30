@@ -5,13 +5,20 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 
-public class PlayerSpec {
+public class PlayerSpec extends Player{
 
 
     @Test
 
+    public void testPlayerAttributes(){
+        Player testPlayer1 = new Player("Josie", 9);
+        assertEquals("Testing return attributes for Player.", "Josie", 9);
+    }
+
+    @Test
+
     public void testPrintHand(){
-        Player testPlayer = new Player();
+        Player testPlayer2 = new Player();
         assertEquals("Testing printing the hand", 2);
     }
 

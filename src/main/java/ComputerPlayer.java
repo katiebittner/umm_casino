@@ -7,22 +7,18 @@ import java.util.*;
 
 public class ComputerPlayer extends Player{
 
-    /*Enumerated types for the random name generation of the computer players
+    //Enumerated types for the random name generation of the computer players
 
-    public enum Names {TOGEPI, ZELDA, RANDOMNAMEHERE, ANOTHERRANDOMNAME };
+    public enum Names {TOGEPI, ZELDA, RANDOMNAMEHERE, ANOTHERRANDOMNAME, OTHERRANDOMNAMES};
 
-   public ComputerPlayer(){
 
-       public static String getRandom(){
-           return Names()[(int) (Math.random()*values().length)];
-       }
+    public ComputerPlayer(String Name, int score){
+
+
+
 
    }
 
-    private Card playRandom(){
-
-    }*/
-
-
 
 }
+
