@@ -17,8 +17,7 @@ public class BlackJack extends Game{
         boolean userWins;   // Did the user win the game?
 
         System.out.println("Welcome " + Casino.playersName + " to the game of blackjack.");
-        System.out.println();
-        System.out.println("The objective of the game is to get to 21 or as close to as possible");
+        System.out.println("\nThe objective of the game is to get to 21 or as close to as possible");
         System.out.println("Have fun!");
 
 
