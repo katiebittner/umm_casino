@@ -50,8 +50,8 @@ public class NumberGame extends Game {
             } while (bet < 0 || bet > money);
             if (bet == 0) {
                 System.out.println("EXITING RANDOMNUMBERGAME");
-                Casino casino = new Casino();
-                casino.options();
+                /*Casino casino = new Casino();
+                casino.options();*/
             }
         }
     }
