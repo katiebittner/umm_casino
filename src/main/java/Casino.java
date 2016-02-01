@@ -20,40 +20,32 @@ public class Casino {
     }
 
     Casino() {
+        System.out.println(ArtWork.welcome);
         scan =  new Scanner(System.in);
         options();
     }
 
     //main menu
+
     public void options() {
 
         while(stayingame) {
 
             if(playersCash == 0){
                 System.out.println("You're now broke. Do you A: Lunge at a table, grab a handful of chips, and make a run for it? B: Get absolutely annihilated drunk on stolen drinks. or C: Try to plead your case to the Unemplyed Murder Monkeys?");
+                while(!scan.hasNext()) {}
 
-                char userInput = Character.toUpperCase(scan.nextLine().charAt(0));
+                char userInput = Character.toUpperCase(scan.next().charAt(0));
 
                 switch(userInput){
-                    case('A'):{
-                        System.out.println(ArtWork.angrymonkey);
-                        System.out.println("You have displeased the monkeys and have been thrown out of the casino!");
-                        stayingame = false;
-                        break;
-                    }
-                    case('B'):{
-                        System.out.println(ArtWork.angrymonkey);
-                        System.out.println("You have displeased the monkeys and have been thrown out of the casino!");
-                        stayingame = false;
-                        break;
-                    }
-                    case('C'):{
+                    default:{
                         System.out.println(ArtWork.angrymonkey);
                         System.out.println("You have displeased the monkeys and have been thrown out of the casino!");
                         stayingame = false;
                         break;
                     }
                 }
+
             }
 
             if(stayingame) {
@@ -62,7 +54,9 @@ public class Casino {
                 System.out.println("Would you like add a player ('A'), remove a player ('R'), " +
                         "select a game ('G'), or view credits ('C')?");
 
-                char userChoice = Character.toUpperCase(scan.nextLine().charAt(0));
+                while(!scan.hasNext()) {}
+
+                char userChoice = Character.toUpperCase(scan.next().charAt(0));
                 switch (userChoice) {
                     case ('A'): {
                         addPlayer();
@@ -92,6 +86,7 @@ public class Casino {
                         options();
                     }
                 }
+
             }
         }
 
@@ -100,14 +95,21 @@ public class Casino {
     void addPlayer() {
 
         System.out.println("Enter player's name.");
-        playersName = scan.nextLine();
+
+        while(!scan.hasNext()){}
+
+        playersName = scan.next();
         System.out.println("We've credited your account with $100. If only all casinos worked like this!");
         playersCash = 100;
     }
 
     void selectGame() {
         System.out.println("Choose from Blackjack, Baccarat, or NumberGame.");
-        String newGame = scan.nextLine();
+        String newGame;
+
+        while(!scan.hasNext()) {}
+
+        newGame = scan.next();
 
         if ( newGame.equalsIgnoreCase("Blackjack")){
             new BlackJack();
