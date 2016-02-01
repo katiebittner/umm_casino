@@ -106,7 +106,7 @@ public class PackOfCards {
     }
 
     //Print ASCI art
-    public void printArt(char[][] cards){
+    public static void printArt(char[][] cards){
         int rows = cards.length;
         int width = cards[0]. length;
         for(int i = 0; i < rows; i++){

@@ -5,91 +5,116 @@ import java.util.Scanner;
  * Created by wscown on 1/29/16.
  */
 public class Casino {
+
+
+    public static String playersName = "Default";
+    public static int playersCash = 100;
+    private boolean stayingame = true;
     //initializing an empty arrayList of players
-    private ArrayList<Player> players = new ArrayList<Player>();
-    private int Maxcompplayers = 3;
+
     //initializes the activeGame to be later up cast into one of the specific Game classes
-    private Game activeGame = new Game();
-    Scanner scan = new Scanner(System.in);
+    Scanner scan;
 
     public static void main(String[] args) {
         Casino casino = new Casino();
     }
-    Casino(){
+
+    Casino() {
+        scan =  new Scanner(System.in);
         options();
-
-
     }
 
     //main menu
-    void options() {
-        System.out.println("Would you like add a player ('A'), remove a player ('R'), " +
-                "select a game ('G'), or view credits ('C')?");
-        String userInput = scan.nextLine();
-        char userChoice = userInput.charAt(0);
-        switch (userChoice) {
-            case ('A'): {
-                addPlayer();
-                options();
-            }
-            break;
-            case ('R'): {
-                removePlayer();
-                options();
-            }
-            break;
-            case ('G'): {
-                //before starting a game, check the size of the array
-                if (players.size() == 4) {
-                    selectGame();
-                } else if (players.size() == 0) {
-                    System.out.println("You must add at least one player.");
-                    addPlayer();
-                } else {
-                    //get random Computer players
+    public void options() {
+
+        while(stayingame) {
+
+            if(playersCash == 0){
+                System.out.println("You're now broke. Do you A: Lunge at a table, grab a handful of chips, and make a run for it? B: Get absolutely annihilated drunk on stolen drinks. or C: Try to plead your case to the Unemplyed Murder Monkeys?");
+
+                char userInput = Character.toUpperCase(scan.nextLine().charAt(0));
+
+                switch(userInput){
+                    case('A'):{
+                        System.out.println(ArtWork.angrymonkey);
+                        System.out.println("You have displeased the monkeys and have been thrown out of the casino!");
+                        stayingame = false;
+                        break;
+                    }
+                    case('B'):{
+                        System.out.println(ArtWork.angrymonkey);
+                        System.out.println("You have displeased the monkeys and have been thrown out of the casino!");
+                        stayingame = false;
+                        break;
+                    }
+                    case('C'):{
+                        System.out.println(ArtWork.angrymonkey);
+                        System.out.println("You have displeased the monkeys and have been thrown out of the casino!");
+                        stayingame = false;
+                        break;
+                    }
                 }
             }
-            break;
-            case ('C'): {
-                credits();
-                options();
-            }
-            break;
-            default: {
-                System.out.println("Please enter a valid command.");
-                options();
-            }
 
+            if(stayingame) {
+
+                System.out.println("WELCOME TO THE MAIN MENU");
+                System.out.println("Would you like add a player ('A'), remove a player ('R'), " +
+                        "select a game ('G'), or view credits ('C')?");
+
+                char userChoice = Character.toUpperCase(scan.nextLine().charAt(0));
+                switch (userChoice) {
+                    case ('A'): {
+                        addPlayer();
+                        options();
+                    }
+                    break;
+                    case ('R'): {
+
+                        options();
+                    }
+                    break;
+                    case ('G'): {
+                        if (playersName.compareTo("Default") == 0) {
+                            System.out.println("Please add a player first.");
+                        } else {
+                            selectGame();
+                        }
+                    }
+                    break;
+                    case ('C'): {
+                        credits();
+                        options();
+                    }
+                    break;
+                    default: {
+                        System.out.println("Please enter a valid command.");
+                        options();
+                    }
+                }
+            }
         }
-
 
     }
 
     void addPlayer() {
-        if (players.size() < 4) {
 
-            System.out.println("Enter player's name.");
-            String player = scan.nextLine();
-            players.add(new Player());
-            //player constructor takes arguments for name and score. starts at 0
-        } else {
-            System.out.println("You already have 4 players.");
-        }
-    }
-
-    void removePlayer() {
-        System.out.println("Remove how many players?");
-        int removing = scan.nextInt();
-        for (int i = 0; i <= removing; i++) {
-            players.remove(i);
-        }
-
+        System.out.println("Enter player's name.");
+        playersName = scan.nextLine();
+        System.out.println("We've credited your account with $100. If only all casinos worked like this!");
+        playersCash = 100;
     }
 
     void selectGame() {
         System.out.println("Choose from Blackjack, Baccarat, or NumberGame.");
         String newGame = scan.nextLine();
-        //need Game constructor
+
+        if ( newGame.equalsIgnoreCase("Blackjack")){
+            new BlackJack();
+        }
+        if (newGame.equalsIgnoreCase("Baccarat")){
+            new Bacarat();
+        }
 
     }
 
@@ -98,6 +123,5 @@ public class Casino {
                 "Jocelyn Harper, Will Scown. January 2016");
         options();
     }
-
 }
 

@@ -1,15 +1,25 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * Created by wscown on 1/29/16.
  */
-public class Game {
+public abstract class Game {
 
-    ArrayList<Player> allPlayers;
+    protected Scanner scanner;
 
+    protected PackOfCards poc;
 
-    Game(ArrayList players){
-        allPlayers = players;
+    public void printhand(ArrayList<Card> hand){
+
+        int size = hand.size();
+
+        char [][] output = hand.get(0).toCharGraphic();
+
+        for(int i = 1; i < size; i++){
+            output = poc.makeArt(output, hand.get(i).toCharGraphic());
+        }
+
+        poc.printArt(output);
     }
 }
-
-
-Game game = new Game(players);

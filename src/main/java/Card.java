@@ -120,8 +120,8 @@ public class Card {
         }
 
         if(value != Value.ACE && value != Value.TEN && value != Value.JACK && value != Value.QUEEN && value != Value.KING){
-            output[1][1] = ((Integer)value.ordinal()).toString().charAt(0);
-            output[3][4] = ((Integer)value.ordinal()).toString().charAt(0);
+            output[1][1] = ((Integer)(value.ordinal() + 1)).toString().charAt(0);
+            output[3][4] = ((Integer)(value.ordinal() + 1)).toString().charAt(0);
         }else if(value == Value.ACE){
             output[1][1] = 'A';
             output[3][4] = 'A';
