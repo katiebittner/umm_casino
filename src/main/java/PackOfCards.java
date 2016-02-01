@@ -7,11 +7,11 @@ import java.util.Random;
 public class PackOfCards {
 
     //Main method used for testing
-    /*
+
     public static void main(String[] args) {
         PackOfCards poc = new PackOfCards();
 
-    }*/
+    }
 
     //Our deck of cards
     private ArrayList<Card> deck;

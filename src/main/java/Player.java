@@ -7,16 +7,10 @@ public class Player {
 
 
     private String name;
-    private int score;
     private int money;
 
-    public Player(){
-
-    }
-
-    public Player(String name, int score, int money) {
+    public Player(String name, int money) {
         this.name = name;
-        this.score = score;
         this.money = money;
     }
 

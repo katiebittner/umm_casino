@@ -5,7 +5,7 @@ import org.junit.runner.Computer;
 
 import java.util.*;
 
-public class ComputerPlayer extends Player{
+/*public class ComputerPlayer extends Player{
 
     //Enumerated types for the random name generation of the computer players
 
@@ -17,5 +17,5 @@ public class ComputerPlayer extends Player{
     }
 
 
-}
+}*/
 
