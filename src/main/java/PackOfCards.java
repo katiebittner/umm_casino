@@ -7,11 +7,17 @@ import java.util.Random;
 public class PackOfCards {
 
     //Main method used for testing
-    /*
+
     public static void main(String[] args) {
         PackOfCards poc = new PackOfCards();
 
-    }*/
+        char [][] output = poc.dealCard().toCharGraphic();
+        for(int i = 0; i < 4; i++){
+            output = poc.makeArt(output, poc.dealCard().toCharGraphic());
+        }
+
+        poc.printArt(output);
+    }
 
     //Our deck of cards
     private ArrayList<Card> deck;
@@ -34,15 +40,19 @@ public class PackOfCards {
         Random r = new Random();
         int rand;
 
-        for(int i = 0; i < 52; i++){
-            rand = r.nextInt(52 - i);
+        for(int i = 0; i < deck.size(); i++){
+            rand = r.nextInt(deck.size() - i);
             deck.add(deck.remove(rand));
         }
     }
 
     //Remove and return card from "top" of deck
     public Card dealCard(){
-        return deck.remove(0);
+        if(deck.size() != 0) {
+            return deck.remove(0);
+        }else{
+            return null;
+        }
     }
 
     //Add card from the "base" of the deck and return the size of the current deck
@@ -70,5 +80,37 @@ public class PackOfCards {
     //Return arraylist of cards for testing
     public ArrayList<Card> getDeck(){
         return deck;
+    }
+
+    //Make ASCI art
+    public char[][] makeArt(char[][] original, char[][] append){
+
+        int oRows = original.length;
+        int oWidth = original[0].length;
+        int aWidth = append[0].length;
+        int j;
+
+        char[][] output = new char[original.length][original[0].length + 1 + append[0].length];
+
+        for(int i = 0; i < oRows; i++){
+            for(j = 0; j < oWidth; j++){
+                output[i][j] = original[i][j];
+            }
+            output[i][j] = ' ';
+            j++;
+            for(int k = 0; k < aWidth; k++){
+                output[i][j+k] = append[i][k];
+            }
+        }
+        return output;
+    }
+
+    //Print ASCI art
+    public static void printArt(char[][] cards){
+        int rows = cards.length;
+        int width = cards[0]. length;
+        for(int i = 0; i < rows; i++){
+            System.out.println(cards[i]);
+        }
     }
 }
