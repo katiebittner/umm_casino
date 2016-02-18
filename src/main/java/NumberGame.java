@@ -20,6 +20,10 @@ public class NumberGame extends Game {
         run();
     }
 
+    NumberGame(String Test) {
+        poc = new PackOfCards();
+    }
+
     public void printInstructions() {
 
         System.out.println("Welcome to Unemployed Murder Monkey's House Card Game!");
@@ -71,7 +75,6 @@ public class NumberGame extends Game {
                     money -= bet;
                 }
             }
-
         }
     }
 
@@ -92,39 +95,49 @@ public class NumberGame extends Game {
 
         Card card2 = poc.dealCard();
         PackOfCards.printArt(card2.toCharGraphic());
-
-        if ((newCard.getValue().ordinal() < card2.getValue().ordinal()) && guess.equals("H")) {
-            System.out.println("You guessed correctly! Your current pot total is: " + (money + bet));
-            return true;
-        }
-
-        if ((newCard.getValue().ordinal() == card2.getValue().ordinal()) && guess.equals("H")) {
+        boolean isItEqual = isEqual(newCard, card2);
+        if (isItEqual) {
             System.out.println("It's a draw. Dealer wins! Your current pot is: " + (money - bet));
             return false;
         }
-        if ((newCard.getValue().ordinal() == card2.getValue().ordinal()) && guess.equals("L")) {
-            System.out.println("It's a draw. Dealer wins! Your current pot is: " + (money - bet));
-            return false;
-        }
-        if ((newCard.getValue().ordinal() < card2.getValue().ordinal()) && guess.equals("L")) {
-            System.out.println("You did not guess the card correctly. It was actually higher! Your current pot total is:  " + (money - bet));
-            return false;
-        }
+        //returns true if the second card is higher than the first
+        boolean isItHigher = isHigher(newCard, card2);
+        if (isItHigher) {
+            if (guess.equals("H")) {
+                System.out.println("You guessed correctly! Your current pot total is: " + (money + bet));
+                return true;
+            } else {
+                System.out.println("You did not guess the card correctly. It was actually lower! Your current pot total is:  " + (money - bet));
+                return false;
+            }
 
-        if (newCard.getValue().ordinal() > card2.getValue().ordinal() && guess.equals("H")) {
-            System.out.println("You did not guess the card correctly. It was actually lower! Your current pot total is:  " + (money - bet));
-            return false;
-        }
+        } else {
+            if (guess.equals("L")) {
+                System.out.println("You guessed correctly! Your current pot total is: " + (money + bet));
+                return true;
+            } else {
+                System.out.println("You did not guess the card correctly. It was actually lower! Your current pot total is:  " + (money - bet));
+                return false;
 
-        if (newCard.getValue().ordinal() > card2.getValue().ordinal() && guess.equals("L")) {
-            System.out.println("You guessed correctly! Your current pot total is:  " + (money + bet));
+            }
+        }
+    }
+
+    //returns true if the cards are equal
+    public boolean isEqual(Card card1, Card card2) {
+        if (card1.getValue().ordinal() == card2.getValue().ordinal()) {
             return true;
+        } else {
+            return false;
         }
+    }
 
-        if (newCard.getValue().ordinal() > card2.getValue().ordinal() && guess.equals("L")) {
-            System.out.println("You guessed correctly! Your current pot total is: " + (money + bet));
+    //returns true if the second card is higher than the first
+    public boolean isHigher(Card card1, Card card2) {
+        if (card1.getValue().ordinal() < card2.getValue().ordinal()) {
             return true;
+        } else {
+            return false;
         }
-        return true;
     }
 }
