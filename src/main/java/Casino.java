@@ -1,18 +1,11 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by wscown on 1/29/16.
- */
 public class Casino {
-
 
     public static String playersName = "Default";
     public static int playersCash = 100;
     private boolean stayingame = true;
-    //initializing an empty arrayList of players
 
-    //initializes the activeGame to be later up cast into one of the specific Game classes
     Scanner scan;
 
     public static void main(String[] args) {
@@ -21,40 +14,41 @@ public class Casino {
 
     Casino() {
         System.out.println(ArtWork.welcome);
-        scan =  new Scanner(System.in);
+        scan = new Scanner(System.in);
         options();
     }
 
     //main menu
-
     public void options() {
 
-        while(stayingame) {
+        while (stayingame) {
 
-            if(playersCash == 0){
-                System.out.println("You're now broke. Do you A: Lunge at a table, grab a handful of chips, and make a run for it? B: Get absolutely annihilated drunk on stolen drinks. or C: Try to plead your case to the Unemplyed Murder Monkeys?");
-                while(!scan.hasNext()) {}
+            if (playersCash == 0) {
+                System.out.println("You're now broke. Do you A: Lunge at a table, grab a handful of chips, and make a run for it? " +
+                        "B: Get absolutely annihilated drunk on stolen drinks. or C: Try to plead your case to the Unemployed Murder Monkeys?");
+                while (!scan.hasNext()) {
+                }
 
                 char userInput = Character.toUpperCase(scan.next().charAt(0));
 
-                switch(userInput){
-                    default:{
+                switch (userInput) {
+                    default: {
                         System.out.println(ArtWork.angrymonkey);
                         System.out.println("You have displeased the monkeys and have been thrown out of the casino!");
                         stayingame = false;
                         break;
                     }
                 }
-
             }
 
-            if(stayingame) {
+            if (stayingame) {
 
                 System.out.println("WELCOME TO THE MAIN MENU");
-                System.out.println("Would you like add a player ('A'), remove a player ('R'), " +
+                System.out.println("Would you like add a player ('A'), " +
                         "select a game ('G'), or view credits ('C')?");
 
-                while(!scan.hasNext()) {}
+                while (!scan.hasNext()) {
+                }
 
                 char userChoice = Character.toUpperCase(scan.next().charAt(0));
                 switch (userChoice) {
@@ -63,13 +57,8 @@ public class Casino {
                         options();
                     }
                     break;
-                    case ('R'): {
-
-                        options();
-                    }
-                    break;
                     case ('G'): {
-                        if (playersName.compareTo("Default") == 0) {
+                        if (playersName.equals("Default")) {
                             System.out.println("Please add a player first.");
                         } else {
                             selectGame();
@@ -86,17 +75,16 @@ public class Casino {
                         options();
                     }
                 }
-
             }
         }
-
     }
 
     void addPlayer() {
 
         System.out.println("Enter player's name.");
 
-        while(!scan.hasNext()){}
+        while (!scan.hasNext()) {
+        }
 
         playersName = scan.next();
         System.out.println("We've credited your account with $100. If only all casinos worked like this!");
@@ -107,15 +95,19 @@ public class Casino {
         System.out.println("Choose from Blackjack, Baccarat, or NumberGame.");
         String newGame;
 
-        while(!scan.hasNext()) {}
+        while (!scan.hasNext()) {
+        }
 
         newGame = scan.next();
 
-        if ( newGame.equalsIgnoreCase("Blackjack")){
+        if (newGame.equalsIgnoreCase("Blackjack")) {
             new BlackJack();
         }
-        if (newGame.equalsIgnoreCase("Baccarat")){
+        if (newGame.equalsIgnoreCase("Baccarat")) {
             new Bacarat();
+        }
+        if (newGame.equalsIgnoreCase("NumberGame")){
+            new NumberGame();
         }
 
     }
@@ -126,4 +118,3 @@ public class Casino {
         options();
     }
 }
-

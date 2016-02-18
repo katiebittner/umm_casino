@@ -10,6 +10,10 @@ public class BlackJack extends Game{
         run();
     }
 
+    BlackJack(String test){
+        poc = new PackOfCards();
+    }
+
     public void run()
     {
         int money;          // Amount of money the user has.

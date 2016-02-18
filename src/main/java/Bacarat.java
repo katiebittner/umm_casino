@@ -13,6 +13,10 @@ public class Bacarat extends Game{
         run();
     }
 
+    Bacarat(String test){
+        poc = new PackOfCards();
+    }
+
     public void run()
     {
         int money;          // Amount of money the user has.
@@ -69,7 +73,7 @@ public class Bacarat extends Game{
 
     private boolean playBacarat()
     {
-        // Let the user play one game of Blackjack.
+        // Let the user play one game.
         // Return true if the user wins, false if the user loses.
 
         ArrayList<Card> dealerHand = new ArrayList<Card>();   // The dealer's hand.
@@ -80,7 +84,7 @@ public class Bacarat extends Game{
         userHand.add(poc.dealCard());
         userHand.add(poc.dealCard());
 
-        /* Check if one of the players has Blackjack (two cards totaling to 21).
+        /* Check if one of the players has a natural.
         The player with Blackjack wins the game.  Dealer wins ties.
          */
         int userHandValue, dealerHandValue;
@@ -120,7 +124,7 @@ public class Bacarat extends Game{
         System.out.println("Neither player has a natural.");
 
         if (userHandValue <= 5) {
-            System.out.println("\n" + Casino.playersName + " has a hand worth less than 5. Press and return any numner to draw your third card.");
+            System.out.println("\n" + Casino.playersName + " has a hand worth less than 5. Press and return any number to draw your third card.");
             int test = scanner.nextInt();
             userHand.add(poc.dealCard());
 
