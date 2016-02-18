@@ -1,6 +1,3 @@
-/**
- * Created by wscown on 1/29/16.
- */
 import java.util.*;
 
 public class Player {
@@ -10,7 +7,7 @@ public class Player {
     private int score;
 
 
-    private void Player(String name, int score){
+    private void Player(String name, int score) {
         this.name = name;
         this.score = score;
     }
@@ -27,20 +24,4 @@ public class Player {
             return null;
         }
     }
-
-    public void setCard(Card card){
-
-
-
-    }
-
-    public Card getCard(int Position){
-
-        return null;
-
-    }
-
-
-
-
 }

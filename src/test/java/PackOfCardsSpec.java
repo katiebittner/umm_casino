@@ -1,10 +1,9 @@
 import org.junit.Test;
+
 import static org.junit.Assert.*;
+
 import java.util.ArrayList;
 
-/**
- * Created by wscown on 1/29/16.
- */
 public class PackOfCardsSpec {
 
     @Test
@@ -48,7 +47,7 @@ public class PackOfCardsSpec {
         Card sample;
 
         //With
-        PackOfCards poc =  new PackOfCards();
+        PackOfCards poc = new PackOfCards();
 
         //When
         poc.shuffle();
@@ -58,16 +57,16 @@ public class PackOfCardsSpec {
         //Then
         assertEquals("52 cards were shuffled. There should still be 52 cards in the deck.", 52, poc.getSize());
 
-        for(int i = 0; i < 52; i++){
+        for (int i = 0; i < 52; i++) {
             sample = poc.dealCard();
 
-            if(sample.getSuit() == Suit.CLUBS){
+            if (sample.getSuit() == Suit.CLUBS) {
                 clubs++;
-            }else if(sample.getSuit() == Suit.SPADES){
+            } else if (sample.getSuit() == Suit.SPADES) {
                 spades++;
-            }else if(sample.getSuit() == Suit.DIAMONDS){
+            } else if (sample.getSuit() == Suit.DIAMONDS) {
                 diamonds++;
-            }else if(sample.getSuit() == Suit.HEARTS){
+            } else if (sample.getSuit() == Suit.HEARTS) {
                 hearts++;
             }
         }
@@ -81,23 +80,21 @@ public class PackOfCardsSpec {
     }
 
     @Test
-    public void testdealCardreturntoDeck(){
+    public void testdealCardreturntoDeck() {
         //With
-        PackOfCards poc =  new PackOfCards();
+        PackOfCards poc = new PackOfCards();
 
-        for(int i = 0; i < 52; i++){
+        for (int i = 0; i < 52; i++) {
             assertEquals("Card object was not dealt on request", poc.dealCard().getClass(), new Card().getClass());
         }
 
         assertEquals("52 cards should have been dealt with the dealCard method. The pack should now be empty but this has not occured.", 0, poc.getSize());
         assertEquals("52 cards should have been dealt with the dealCard method. The pack should now be empty and null returned when the dealCard method is called.", null, poc.dealCard());
 
-        for(int i = 0; i < 52; i++){
+        for (int i = 0; i < 52; i++) {
             poc.returntoDeck(new Card());
         }
 
         assertEquals("52 cards were added to an empty deck. The pack should now contain 52 cards.", 52, poc.getSize());
     }
-
-
 }

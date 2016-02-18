@@ -100,15 +100,15 @@ public class Casino {
 
         newGame = scan.next();
 
-        if ( newGame.equalsIgnoreCase("Blackjack")){
+        if (newGame.equalsIgnoreCase("Blackjack")) {
             System.out.println(ArtWork.blackjack);
             new BlackJack();
         }
-        if (newGame.equalsIgnoreCase("Bacarat")){
+        if (newGame.equalsIgnoreCase("Bacarat")) {
             System.out.println(ArtWork.bacarat);
             new Bacarat();
         }
-        if (newGame.equalsIgnoreCase("Numbergame")){
+        if (newGame.equalsIgnoreCase("Numbergame")) {
             System.out.println(ArtWork.numbergame);
             new NumberGame();
         }

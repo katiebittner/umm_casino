@@ -1,24 +1,20 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by wscown on 1/29/16.
- */
-public class Bacarat extends Game{
+public class Bacarat extends Game {
 
-    Bacarat(){
+    Bacarat() {
         scanner = new Scanner(System.in);
         poc = new PackOfCards();
         poc.shuffle();
         run();
     }
 
-    Bacarat(String test){
+    Bacarat(String test) {
         poc = new PackOfCards();
     }
 
-    public void run()
-    {
+    public void run() {
         int money;          // Amount of money the user has.
         int bet;            // Amount user bets on a game.
         boolean userWins;   // Did the user win the game?
@@ -30,37 +26,30 @@ public class Bacarat extends Game{
 
         money = Casino.playersCash;  // User starts with $100.
 
-        while (true)
-        {
+        while (true) {
             System.out.println("You have " + money + " dollars.");
-            do
-            {
+            do {
                 System.out.println("How much money do you want to bet?  (Enter 0 to end.)");
                 System.out.println();
                 bet = scanner.nextInt();
 
-                if (bet < 0 || bet > money)
-                {
+                if (bet < 0 || bet > money) {
                     System.out.println("Your answer must be between 0 and " + money + '.');
                 }
             } while (bet < 0 || bet > money);
-            if (bet == 0)
-            {
+            if (bet == 0) {
                 System.out.println("EXITING BACCARAT");
 
                 break;
             }
             userWins = playBacarat();
-            if (userWins)
-            {
+            if (userWins) {
                 money = money + bet;
-            } else
-            {
+            } else {
                 money = money - bet;
             }
             System.out.println();
-            if (money == 0)
-            {
+            if (money == 0) {
                 System.out.println("Looks like you are out of money!");
                 System.out.println("The first step to recovery is admitting you have a problem " + Casino.playersName + ". The national problem gambling helpline is 1-800-522-4700.");
                 break;
@@ -71,8 +60,7 @@ public class Bacarat extends Game{
         Casino.playersCash = money;
     }
 
-    private boolean playBacarat()
-    {
+    private boolean playBacarat() {
         // Let the user play one game.
         // Return true if the user wins, false if the user loses.
 
@@ -92,8 +80,7 @@ public class Bacarat extends Game{
         userHandValue = value(userHand);
         dealerHandValue = value(dealerHand);
 
-        if (dealerHandValue >= 8 || userHandValue >= 8)
-        {
+        if (dealerHandValue >= 8 || userHandValue >= 8) {
             System.out.println(Casino.playersName + "  has the following hand:");
 
             printhand(userHand);
@@ -102,13 +89,13 @@ public class Bacarat extends Game{
 
             printhand(dealerHand);
 
-            if(dealerHandValue > userHandValue){
+            if (dealerHandValue > userHandValue) {
                 System.out.println("Dealer wins! Dealer has " + dealerHandValue + " and " + Casino.playersName + " has " + userHandValue + ".");
                 return false;
-            }else if(dealerHandValue < userHandValue){
+            } else if (dealerHandValue < userHandValue) {
                 System.out.println(Casino.playersName + " wins! Dealer has " + dealerHandValue + " and " + Casino.playersName + " has " + userHandValue + ".");
                 return true;
-            }else{
+            } else {
                 System.out.println("Dealer wins on a draw! Dealer and " + Casino.playersName + " both have " + userHandValue + ".");
                 return false;
             }
@@ -144,18 +131,18 @@ public class Bacarat extends Game{
             } else {
                 System.out.println("Dealer stands with a hand value of " + dealerHand);
             }
-        }else{
-            if(dealerHandValue <= 2){
+        } else {
+            if (dealerHandValue <= 2) {
                 dealerHand.add(poc.dealCard());
-            }else if(dealerHandValue == 3 && (userHand.get(2).getValue().ordinal() + 1 != 8)){
+            } else if (dealerHandValue == 3 && (userHand.get(2).getValue().ordinal() + 1 != 8)) {
                 dealerHand.add(poc.dealCard());
-            }else if(dealerHandValue == 4 && (userHand.get(2).getValue().ordinal() + 1 < 8 && userHand.get(2).getValue().ordinal() + 1 != 1)){
+            } else if (dealerHandValue == 4 && (userHand.get(2).getValue().ordinal() + 1 < 8 && userHand.get(2).getValue().ordinal() + 1 != 1)) {
                 dealerHand.add(poc.dealCard());
-            }else if(dealerHandValue == 5 && (userHand.get(2).getValue().ordinal() + 1 < 8 && userHand.get(2).getValue().ordinal() + 1 > 3)){
+            } else if (dealerHandValue == 5 && (userHand.get(2).getValue().ordinal() + 1 < 8 && userHand.get(2).getValue().ordinal() + 1 > 3)) {
                 dealerHand.add(poc.dealCard());
-            }else if(dealerHandValue == 6 && (userHand.get(2).getValue().ordinal() + 1 == 6 || userHand.get(2).getValue().ordinal() + 1 ==7)){
+            } else if (dealerHandValue == 6 && (userHand.get(2).getValue().ordinal() + 1 == 6 || userHand.get(2).getValue().ordinal() + 1 == 7)) {
 
-            }else if(dealerHandValue == 7){
+            } else if (dealerHandValue == 7) {
                 System.out.println("Dealer stands with a hand value of " + dealerHandValue + ".");
             }
         }
@@ -167,20 +154,19 @@ public class Bacarat extends Game{
 
         printhand(dealerHand);
 
-        if(dealerHandValue > userHandValue){
+        if (dealerHandValue > userHandValue) {
             System.out.println("Dealer wins! Dealer has " + dealerHandValue + " and " + Casino.playersName + " has " + userHandValue + ".");
             return false;
-        }else if(dealerHandValue < userHandValue){
+        } else if (dealerHandValue < userHandValue) {
             System.out.println(Casino.playersName + " wins! Dealer has " + dealerHandValue + " and " + Casino.playersName + " has " + userHandValue + ".");
             return true;
-        }else{
+        } else {
             System.out.println("Dealer wins on a draw! Dealer and " + Casino.playersName + " both have " + userHandValue + ".");
             return false;
         }
     }
 
-    public int value(ArrayList<Card> hand)
-    {
+    public int value(ArrayList<Card> hand) {
         // Returns the value of this hand for the
         // game of Blackjack.
 
@@ -197,7 +183,7 @@ public class Bacarat extends Game{
             }
         }
 
-        return val%10;
+        return val % 10;
     }
 
 }

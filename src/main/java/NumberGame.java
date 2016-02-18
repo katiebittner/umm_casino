@@ -1,7 +1,3 @@
-/**
- * Created by wscown on 1/29/16.
- */
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -22,8 +18,6 @@ public class NumberGame extends Game {
 
         printInstructions();
         run();
-
-
     }
 
     public void printInstructions() {
@@ -50,7 +44,7 @@ public class NumberGame extends Game {
                 System.out.println("Looks like you are out of money!");
                 System.out.println("The first step to recovery is admitting you have a problem " + Casino.playersName + ". The national problem gambling helpline is 1-800-522-4700.");
                 playon = false;
-            }else {
+            } else {
 
                 System.out.println("How much money do you want to bet?  (Enter 0 to end.)");
                 System.out.print("?");
@@ -81,7 +75,6 @@ public class NumberGame extends Game {
         }
     }
 
-
     public boolean playNumberGame() { //This is checking if the user has guessed the card correctly
 
         PackOfCards poc = new PackOfCards();
@@ -90,8 +83,6 @@ public class NumberGame extends Game {
         poc.shuffle();
         Card newCard = poc.dealCard();
         discard.add(newCard);
-
-
 
         PackOfCards.printArt(newCard.toCharGraphic());
 
@@ -130,13 +121,10 @@ public class NumberGame extends Game {
             return true;
         }
 
-        if (newCard.getValue().ordinal() > card2.getValue().ordinal() && guess.equals("L")){
+        if (newCard.getValue().ordinal() > card2.getValue().ordinal() && guess.equals("L")) {
             System.out.println("You guessed correctly! Your current pot total is: " + (money + bet));
             return true;
-
         }
-
         return true;
     }
-
 }

@@ -4,9 +4,6 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-/**
- * Created by wscown on 1/29/16.
- */
 public class BacaratSpec {
     @Test
     public void valueTest() {

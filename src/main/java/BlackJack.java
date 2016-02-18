@@ -1,21 +1,20 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class BlackJack extends Game{
+public class BlackJack extends Game {
 
-    BlackJack(){
+    BlackJack() {
         scanner = new Scanner(System.in);
         poc = new PackOfCards();
         poc.shuffle();
         run();
     }
 
-    BlackJack(String test){
+    BlackJack(String test) {
         poc = new PackOfCards();
     }
 
-    public void run()
-    {
+    public void run() {
         int money;          // Amount of money the user has.
         int bet;            // Amount user bets on a game.
         boolean userWins;   // Did the user win the game?
@@ -27,37 +26,30 @@ public class BlackJack extends Game{
 
         money = Casino.playersCash;  // User starts with $100.
 
-        while (true)
-        {
+        while (true) {
             System.out.println("You have " + money + " dollars.");
-            do
-            {
+            do {
                 System.out.println("How much money do you want to bet?  (Enter 0 to end.)");
                 System.out.println();
                 bet = scanner.nextInt();
 
-                if (bet < 0 || bet > money)
-                {
+                if (bet < 0 || bet > money) {
                     System.out.println("Your answer must be between 0 and " + money + '.');
                 }
             } while (bet < 0 || bet > money);
-            if (bet == 0)
-            {
+            if (bet == 0) {
                 System.out.println("EXITING BLACK JACK");
 
                 break;
             }
             userWins = playBlackJack();
-            if (userWins)
-            {
+            if (userWins) {
                 money = money + bet;
-            } else
-            {
+            } else {
                 money = money - bet;
             }
             System.out.println();
-            if (money == 0)
-            {
+            if (money == 0) {
                 System.out.println("Looks like you are out of money!");
                 System.out.println("The first step to recovery is admitting you have a problem " + Casino.playersName + ". The national problem gambling helpline is 1-800-522-4700.");
                 break;
@@ -69,8 +61,7 @@ public class BlackJack extends Game{
 
     } // end main()
 
-    private boolean playBlackJack()
-    {
+    private boolean playBlackJack() {
         // Let the user play one game of Blackjack.
         // Return true if the user wins, false if the user loses.
 
@@ -86,8 +77,7 @@ public class BlackJack extends Game{
         The player with Blackjack wins the game.  Dealer wins ties.
          */
 
-        if (value(dealerHand) == 21)
-        {
+        if (value(dealerHand) == 21) {
             System.out.println("Dealer has the following hand:");
 
             printhand(dealerHand);
@@ -100,8 +90,7 @@ public class BlackJack extends Game{
             return false;
         }
 
-        if (value(userHand) == 21)
-        {
+        if (value(userHand) == 21) {
 
             System.out.println("Dealer has the following hand:");
 
@@ -120,8 +109,7 @@ public class BlackJack extends Game{
         chooses to "Stand" or when the user goes over 21.
          */
 
-        while (true)
-        {
+        while (true) {
             /* Display user's cards, and let user decide to Hit or Stand. */
 
             System.out.println("\nYour cards are:");
@@ -132,11 +120,9 @@ public class BlackJack extends Game{
             printhand(dealerHand);
             System.out.print("\nHit (H) or Stand (S)? ");
             char userAction;  // User's response, 'H' or 'S'.
-            do
-            {
+            do {
                 userAction = Character.toUpperCase(scanner.next().charAt(0));
-                if (userAction != 'H' && userAction != 'S')
-                {
+                if (userAction != 'H' && userAction != 'S') {
                     System.out.print("Please respond H or S:  ");
                 }
             } while (userAction != 'H' && userAction != 'S');
@@ -145,19 +131,16 @@ public class BlackJack extends Game{
             dealer gets a chance to draw and the game ends.
              */
 
-            if (userAction == 'S')
-            {
+            if (userAction == 'S') {
                 // Loop ends; user is done taking cards.
                 break;
-            } else
-            {  // userAction is 'H'.
+            } else {  // userAction is 'H'.
                 // Give the user a card.  If the user goes over 21, the user loses.
                 Card newCard = poc.dealCard();
                 userHand.add(newCard);
                 System.out.println("\n" + Casino.playersName + " hits.");
 
-                if (value(userHand) > 21)
-                {
+                if (value(userHand) > 21) {
                     printhand(userHand);
                     System.out.println("\nYou busted by going over 21.  You lose.");
 
@@ -180,8 +163,7 @@ public class BlackJack extends Game{
 
         printhand(dealerHand);
 
-        while (value(dealerHand) <= 16 || ((value(userHand) <= 21)) && (value(userHand) > value(dealerHand)))
-        {
+        while (value(dealerHand) <= 16 || ((value(userHand) <= 21)) && (value(userHand) > value(dealerHand))) {
             Card newCard = poc.dealCard();
 
             dealerHand.add(newCard);
@@ -194,24 +176,18 @@ public class BlackJack extends Game{
         /* Now, the winner can be declared. */
 
         System.out.println();
-        if (value(dealerHand) > 21)
-        {
+        if (value(dealerHand) > 21) {
             System.out.println("Dealer busted by going over 21.  You win.");
             return true;
-        } else
-        {
-            if (value(dealerHand) == value(userHand))
-            {
+        } else {
+            if (value(dealerHand) == value(userHand)) {
                 System.out.println("Dealer wins on a tie.  You lose.");
                 return false;
-            } else
-            {
-                if (value(dealerHand) > value(userHand))
-                {
+            } else {
+                if (value(dealerHand) > value(userHand)) {
                     System.out.println("Dealer wins, " + value(dealerHand) + " points to " + value(userHand) + ".");
                     return false;
-                } else
-                {
+                } else {
                     System.out.println("You win, " + value(userHand) + " points to " + value(dealerHand) + ".");
                     return true;
                 }
@@ -220,8 +196,7 @@ public class BlackJack extends Game{
 
     }  // end playBlackjack()
 
-    public int value(ArrayList<Card> hand)
-    {
+    public int value(ArrayList<Card> hand) {
         // Returns the value of this hand for the
         // game of Blackjack.
 
@@ -231,24 +206,22 @@ public class BlackJack extends Game{
         int acecounter = 0;
         int cards = hand.size();    // Number of cards in the hand.
 
-        for (int i = 0; i < cards; i++)
-        {
+        for (int i = 0; i < cards; i++) {
             cardVal = hand.get(i).getValue().ordinal() + 1;  // The normal value, 1 to 13.
-            if (cardVal == 1)
-            {
+            if (cardVal == 1) {
                 acecounter++;
-            }else if (cardVal > 10){
+            } else if (cardVal > 10) {
                 val += 10;
-            }else{
+            } else {
                 val += cardVal;
             }
         }
 
-        for(int i = 0; i < acecounter; i++){
-            if(val + 11 + (acecounter - (i+1)) <= 21){
-                val+= 11;
-            }else{
-                val+= (acecounter - i);
+        for (int i = 0; i < acecounter; i++) {
+            if (val + 11 + (acecounter - (i + 1)) <= 21) {
+                val += 11;
+            } else {
+                val += (acecounter - i);
                 return val;
             }
         }

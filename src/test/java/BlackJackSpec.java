@@ -1,13 +1,12 @@
 import org.junit.Test;
+
 import static org.junit.Assert.*;
+
 import java.util.ArrayList;
 
-/**
- * Created by wscown on 1/29/16.
- */
 public class BlackJackSpec {
     @Test
-    public void valueTest(){
+    public void valueTest() {
         BlackJack testBlackJack = new BlackJack("test");
         ArrayList<Card> testHand = new ArrayList();
         Card kingOfSpades = new Card(Suit.SPADES, Value.KING);
