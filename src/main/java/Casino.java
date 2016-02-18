@@ -92,7 +92,7 @@ public class Casino {
     }
 
     void selectGame() {
-        System.out.println("Choose from Blackjack, Baccarat, or NumberGame.");
+        System.out.println("Choose from Blackjack, Bacarat, or NumberGame.");
         String newGame;
 
         while (!scan.hasNext()) {
@@ -104,8 +104,8 @@ public class Casino {
             System.out.println(ArtWork.blackjack);
             new BlackJack();
         }
-        if (newGame.equalsIgnoreCase("Baccarat")){
-            System.out.println(ArtWork.baccarat);
+        if (newGame.equalsIgnoreCase("Bacarat")){
+            System.out.println(ArtWork.bacarat);
             new Bacarat();
         }
         if (newGame.equalsIgnoreCase("Numbergame")){

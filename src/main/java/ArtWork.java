@@ -124,7 +124,7 @@ public class ArtWork {
             "\n" +
             "\n";
 
-    public static String baccarat = "   ____                                   __ \n" +
+    public static String bacarat = "   ____                                   __ \n" +
             "   / __ )____ _______________ __________ _/ /_\n" +
             "  / __  / __ `/ ___/ ___/ __ `/ ___/ __ `/ __/\n" +
             " / /_/ / /_/ / /__/ /__/ /_/ / /  / /_/ / /_  \n" +
