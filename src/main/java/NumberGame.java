@@ -107,7 +107,7 @@ public class NumberGame extends Game {
                 System.out.println("You guessed correctly! Your current pot total is: " + (money + bet));
                 return true;
             } else {
-                System.out.println("You did not guess the card correctly. It was actually lower! Your current pot total is:  " + (money - bet));
+                System.out.println("You did not guess the card correctly. It was actually higher! Your current pot total is:  " + (money - bet));
                 return false;
             }
 
